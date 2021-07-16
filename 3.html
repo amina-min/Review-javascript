@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //21.4.2021
+        
+        // Array Method
+        //1.pop
+            var arr=["Nilima","Rabu","Amina","rima"];
+            var arrPop=arr.pop(arr);
+            console.log(arr);  
+        //2.push  
+            var arr=["Nilima","Rabu","Amina","rima"];
+            var arrPop=arr.pop(arr);
+            console.log(arr); 
+        //3.shift
+            var arr=["Nilima","Rabu","Amina","rima"];
+            var arrShift=arr.shift(arr);
+            console.log(arr); 
+        //4.unshift
+            var arr=["Nilima","Rabu","Amina","rima"];
+            var arrUnshift=arr.unshift(50);
+            console.log(arr); 
+
+        //5.join
+            var arr=['blue','green','red'];
+            var arrJoin=arr.join(" & ");
+            console.log(arrJoin); 
+
+        //6.toString
+            var fruits=["banana","apple","orange","mango"];
+            var numsToString=fruits.toString("");
+            console.log(fruits);  
+
+        //7.sort
+            var animals=["lion","zebra","tiger","aliphent"];
+            var sortAnimals=animals.sort();
+            console.log(animals);
+
+        //8 .concat
+            var arr=["toy","book","pen"];
+            var newArr=["celPhon","pc"];
+            var concatArr=arr.concat(newArr);
+            console.log(concatArr);
+
+        //9.reverse
+            var countries=["Bangladesh","India","Bhutan","Myanmar"];
+            var reverseCont=countries.reverse();
+            console.log(countries);
+
+        //10.indexOf
+             var animals=["lion","zebra","tiger","aliphent"];
+             var i=animals.indexOf("zebra");
+            console.log(i);
+
+        //11.lastIndexOf
+            var subjects=["Bangla","Enlish","Math","English","Bioloy","Bangla"];
+            var subLastIndOf=subjects.lastIndexOf("Bangla");
+            console.log(subLastIndOf);
+
+        //12.for of loop
+            var marks=[10,12,40,45,70];
+            for(var m of marks){
+               console.log(m); 
+            }
+
+        //13.splice 
+        var animals=["lion","zebra","tiger","aliphent"];
+             var i=animals.splice(1,2)
+            console.log(animals);    
+    </script>
+</body>
+</html>

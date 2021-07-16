@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /* var sum=0;
+        for(var a=11;a<=30;a+=2){
+            console.log(a);
+         sum+=a;
+        }
+       console.log(sum);
+ //10
+        var ar=[2,3,-1,5,7,9,10,15,95];
+        var sum=sumArray(ar);
+      
+       function sumArray(ar){
+           var sum=0;
+           for(var i=0;i<ar.length;i++){
+               sum+=ar[i];
+               console.log(a);
+           }
+           return sum;
+       }
+      
+       console.log(sum);
+      
+     function sumDigits(n){
+         var s=n.toString();
+         var sum=0;
+         for(var char of s){
+             var digit=parseInt(char);
+             sum+=digit;
+         }
+         return sum;
+     }
+     var sum =sumDigits(1235231);
+     console.log("sum :",sum);
+    
+
+     function isPrime(n){
+         if(n<2){
+             return false;
+         }
+         for(var i=2;i<n;i++){
+             if(n%i==0){
+                 return false ;
+
+             }
+         }
+         return true;
+     }
+
+    // var isResult = isPrime(10);
+     if( isPrime(10)){
+         console.log("It is prime number");
+     }else{
+         console.log("It is not a prime number.");
+     }
+     //console.log(isPrime(97));
+*/
+    
+     //or,
+     function isPrime(n){
+			if(n<2)
+				return false;				
+			for(var i=2;i<n;i++){
+				if(n%i==0){
+				return false; 
+				}
+			}
+				return true;
+		}
+        var primeCount=0;
+		for(var i=1;i<=1000;i++){
+			if(isPrime(i)){
+                primeCount+=1;
+			//console.log(i);
+		    }        
+		}
+        console.log(primeCount);
+			
+        // function isPrime(n){
+		// 	if(n<=1) return 0;
+        //     var count =0;
+        //     for(var i=1;i<=n;i++){
+        //         if(n%i==0){
+        //             count +=1;
+        //         }
+        //         return count;
+        //     }
+		// 	var count= isPrime(2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="mark1" placeholder="Type a number">
+    <button id="result" onclick="ShowResult()">Submit</button>
+     <span id="msg"></span>
+ 
+     <script>
+/*
+ var n = prompt();
+        parseInt(n);
+        function isPrime(n) {
+            if (n < 2)
+                return false;
+            for (var i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        if(isPrime(n)){
+            document.write(n +" is a prime number");
+        }else{
+            document.write( n+" is not a prime number");
+        }
+ */
+         
+         var numBox = document.getElementById("mark1");
+         var msg = document.getElementById("msg");
+ 
+         function isPrime(num){
+                 if(num<2){
+                     return false;
+                 }
+                 for(var i=2;i<num;i++){
+                     if(num%i==0){
+                         return false;
+                     }
+                 }
+                 return true;
+             }
+ 
+           function ShowResult(){
+             var num=parseInt(numBox.value);        
+             if(isPrime(num)){
+                 msg.innerHTML=num+ " is prime number";
+             }else{
+                 msg.innerHTML=num+" is not prime number";
+             }
+           }
+          
+ /*
+    
+        var n=parseInt(prompt("Type a number"));
+    function isPrime(n){              
+        if(n<=1){
+            console.log( n +"  is not a prime number");
+        }
+        for(var i=2;i<n; i++){
+            if(n%i==0){
+                console.log( n +"  is not a prime number");
+            }
+        }
+        console.log(n+" is a prime number");       
+    } 
+    isPrime(n)
+   console.log(isPrime(n));
+    
+
+
+/*
+       function isPrime(n){
+             if(n<2){
+                 return false;
+             }
+             for(var i=2;i<n;i++){       //16
+                if(n%i==0){
+                     return false;
+                 }
+             }
+            return true;
+        }
+        var countPrime=0;
+        var sumPrime=0;
+         for(var i=1;i<=100;i++){
+             if(isPrime(i)){               
+                 //console.log(i);
+                sumPrime+=i;
+              countPrime+=1;
+                
+             }
+         }
+         console.log(sumPrime);
+         console.log(countPrime);
+
+
+
+
+         
+        function isPrime(n){
+		 	if(n<=1) return 0;
+            var count =0;
+            for(var i=1;i<=n;i++){
+                 if(n%i==0){
+                     count +=1;
+                 }
+                 return count;
+            }
+        }
+		 	var count= isPrime();
+             console.log(isPrime(5));
+        
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // function isPrime(n){
+                //     if(n<2){
+                //         return false;
+                //     }
+                //     for(var a=2;a<n;a++){
+                //         if(n%a==0){
+                //             return false;
+                //         }
+                //     }
+                //     return true;
+                // }
+                // console.log(isPrime(101));
+
+// 1-100 prime 
+
+                // function isPrime(n){
+                //     if(n<2){
+                //         return false;
+                //     }
+                //     for(var a=2;a<n;a++){
+                //         if(n%a==0){
+                //             return false;
+                //         }
+                //     }
+                //     return true;
+                // }
+                // var countPrime=0;   //kotogulo prime 
+                // for(var a=1;a<=100;a++){
+                //     if(isPrime(a)){ 
+                //         console.log(a); //1-100 prime              
+                //         countPrime+=1;
+                //     }
+                // }
+                // console.log(countPrime);
+
+//or
+           
+        
+
+    </script>
+</body>
+</html>

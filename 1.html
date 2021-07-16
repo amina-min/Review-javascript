@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+       // 19.4.2021
+
+
+        //variable :store data in a a programe
+        //useing the var keyword
+        // changable
+
+        // var name convention
+        //1. camel case 
+        //2.must be start by text
+        //3. _ and $ sign
+        //4.do not use number in a var name
+        //5.do not use reserved word in a var name
+        //6. do not use @#*&% or others speacilized charecter
+      
+      /*variable Data type 
+            1.primitive: string,Number ,boolean,    (single data)
+            2.compound/non-primitive: array ,object  (multipul data)
+          
+           and others: 
+               . undefiend 
+               . nul
+               . nun
+                
+
+         "string": sequence of unicode charecters
+         string  methods:
+         length, concat, trim, replace,substring ,substr
+         */
+        //1. length
+         var r ="Bangladesh is a small country";
+         var len= r.length;
+            console.log(len);
+      /*
+        //or
+        var a ="Ami na";
+        console.log(a.length);
+
+        // 2.concat
+        var st1=" wealcome home";
+        var st2="Hi,";
+        var concarSt=st2.concat(st1);
+        console.log(concarSt);
+
+        //or
+        var st1=" Hello World";
+        var st2=" wealcome ";
+        var concarSt=st1.concat("",st2 ,"","to WSA");
+        console.log(concarSt);
+
+        //3.trim
+            var str="    we love our country";
+            var str1=str.trim();
+            console.log(str1);
+
+        //4.replace
+            var str1="hi,friends";
+            var str2="how are you";
+            var strReplace=str1.replace(str2);
+            console.log(strReplace);
+        //or
+            var work="Working with Javascript is  hard work but rewarding work.";
+            var play= work.replace(/work/gi,"play");
+            document.write("<p><b>"+work+"<p>"+play);
+          */      
+        //5.substring
+            var a="Hi Friends";
+            var b=a.substring(1,5);   // i Fr
+            console.log(b);
+        //6.substr
+          var a= "hi friends";
+          var strSubstr=a.substr(1,5); //i fri
+          console.log(strSubstr);
+        
+    </script>    
+</body>
+</html>

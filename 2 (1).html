@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+  
+    ID: <input type="text" name="" id="stName"> <br />
+    Name: <input type="text" name="" id="stId"> <br />
+    <br>
+    <button id="addBtn" onclick="addInfo()">Add</button>
+
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+            <tbody id="infoBody">
+               
+            </tbody>
+
+
+    <script>
+        var infoArray = [];
+        var stId = document.getElementById("stId");
+        var stName = document.getElementById("stName");
+        var addBtn = document.getElementById("addBtn");
+        var infoBody = document.getElementById("infoBody");
+
+        function addInfo(){
+            var info = {
+                stId: stId.value,
+                stName: stName.value
+            }
+            infoArray.push(info)
+            stId.value = "";
+            stName.value = "";
+
+            generateTbody();
+        }
+
+        function generateTbody() {
+            infoBody.innerHTML = "";
+            for (var i = 0; i < infoArray.length; i++) {
+               var info = infoArray[i];
+                var trTemp = `
+                <tr>
+                    <td>${i+1}</td>
+                    <td>${info.stId}</td>
+                    <td>${info.stName}</td>
+                    <td><button id="updateBtn" onclick="update(${i})">Update</td>
+                </tr>
+            `
+            infoBody.innerHTML += trTemp;
+            }
+        }
+
+         function update(i){
+             addBtn.innerHTML = "update";
+             addBtn.setAttribute('onclick','updateInfo(' + i + ')');
+         }
+
+
+        function updateInfo(i){
+            var info = {
+                stId: stId.value,
+                stName: stName.value
+            }
+            infoArray[i] = info;
+            stId.value = "";
+            stName.value = "";
+
+            addBtn.innerHTML = "Add";
+            addBtn.setAttribute('onclick','addinfo()');
+
+            generateTbody();
+     }
+
+    </script>
+</body>
+
+</html>

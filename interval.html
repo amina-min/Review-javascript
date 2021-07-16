@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="timeStart()">Start</button>
+    <button onclick="timeStop()">Stop</button>
+    <p id="result">...</p>
+    <script>
+        var showTimer;
+        function timeStart() {
+            showTimer = setInterval(mm, 1000);
+
+            var r = 0;
+            function mm() {
+                var pera = document.getElementById("result").innerHTML = r++;
+            }
+        }
+        function timeStop() {
+            clearInterval(showTimer);
+        }
+
+
+        /*
+        var count=0;
+        sId=setInterval(
+            function(){
+                console.log(++count);
+                if(count==10){
+                   // console.log(sId);
+                    clearInterval(sId);
+                }
+            },2000
+        )
+        */
+
+    </script>
+</body>
+
+</html>

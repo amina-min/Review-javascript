@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 400px;                  
+        }
+        
+    </style>
+</head>
+<body>
+    <fieldset>
+    <form action="form">
+        <table >
+            <caption style="font-weight: 650; font-size:20pt;">Form Validation</caption>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name" onkeypress="nameValid()"></td>
+                <td id="errorMassege"></td>
+            </tr>
+            <tr>
+                <td>Id :</td>
+                <td><input type="text" id="ID" onkeypress="idValid()"></td>
+                <td id="idErrorMassege"></td>
+            </tr>
+            <tr>
+                <td>Mobile No.:</td>
+                <td><input type="text" id="mobileNo" onkeypress="noValidation()"></td>
+                <td id="noErrosMassege"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" id="address"></textarea></td>
+                <td id="addresErrorMassege"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="email" onkeypress="emailValidation()"></td>
+                <td id="emailErrorMassege"></td>
+            </tr>
+            <tr>
+                <td>Skill:</td>               
+                <td >
+                    <input type="checkbox" value="html" name="html">HTML
+                <input type="checkbox" value="css" name="css"> CSS
+                <input type="checkbox"> JEE
+            </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gen" value="M" id="male"/>Male
+                    <input type="radio" name="gen" value="F" id="female"/>Female
+                    <input type="radio" name="gen" value="O" id="others"/>Others
+                </td>
+            </tr>
+            <tr>
+                <td><button id="button" value="buton" onclick="showResult()">Submit</button></td>
+            </tr>
+           
+        </table>
+    </form>
+</fieldset>
+    <script>
+        function showResult(){
+       function nameValid(name){
+        var name = document.getElementById('name').value;
+            var nameReg = new RegExp(/^[a-zA-Z\s]{6,12}$/);
+            if(!nameReg.test(name)){
+                errorMassege.innerHTML="Invalid Name"; 
+                
+            }else{
+                errorMassege.innerHTML="";
+            }         
+       }
+    function idValid(id){
+        var id=document.getElementById("ID").value;
+        var idReg=new RegExp(/^[0-9\s]{6}$/);
+        if(!idReg.test(id)){
+            idErrorMassege.innerHTML="Invalid Id";
+        }else{
+            idErrorMassege.innerHTML="";
+        }
+    }
+    function noValidation(mobileNo){
+        var mobileNo=document.getElementById("mobileNo").value;
+        var noReg=new RegExp(/^[0-9\s]{11}$/);
+        if(!noReg.test(mobileNo)){
+            noErrosMassege.innerHTML="invalid mobile No."
+        }else{
+            noErrosMassege.innerHTML="";
+        }        
+    }
+    function emailValidation(email){
+        var email=document.getElementById("email").value;
+       var regex=/^([a-z0-9-]+)(\.?-?_?[a-z0-9]+)@([a-z0-9]+)\.([a-z]){2,3}$/;
+       if(!regex.test(email)){
+        emailErrorMassege.innerHTML="Invaid email";
+       }else{
+        emailErrorMassege.innerHTML=" ";
+       }
+    }
+}
+    </script>
+</body>
+</html>

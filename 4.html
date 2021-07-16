@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+            padding: 100px;
+        }
+        form{
+            background-color: white;
+            margin: auto;
+            width: 300px;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <form onsubmit="return onSubmit()">
+        <table>
+            <h3>Form validation</h3>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input name="name" type="text" onkeypress="nameValidate(this.value)" id="name"/>
+                </td>
+                <td id="name_error_msg"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input name="email" type="email" id="email" onkeyup="emailValidate()">
+                </td>
+                <td id="email_error_msg"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function nameValidate(name){
+            var nameErrorMsg = document.getElementById('name_error_msg');
+            var nameRe = new RegExp(/^[a-zA-Z\s]{3,16}$/);
+            //console.log(nameRe.test(name));
+          if(!nameRe.test(name)){              
+              nameErrorMsg.innerHTML = 'Invalid name';
+              nameErrorMsg.style = "color: red; font-weight: 600;"
+              
+          }else{
+            nameErrorMsg.innerHTML = 'Excellent..!';
+            nameErrorMsg.style = "color: green; font-weight: 700;"
+          }
+        }
+
+        function emailValidate(){
+            var email = document.getElementById('email').value;
+            var emailErrorMsg = document.getElementById('email_error_msg');
+            var emailRe = new RegExp( /^([a-z0-9_]+)(\.)?([a-z0-9_]+)@([a-z0-9]+)\.([a-z]{3})$/);
+          if(!emailRe.test(email)){              
+            emailErrorMsg.innerHTML = 'Invalid email';
+            emailErrorMsg.style = "color: red; font-weight: 600;"
+            
+
+          }else{
+            emailErrorMsg.innerHTML = 'Excellent..!';
+            emailErrorMsg.style = "color: green; font-weight: 700;"
+          }
+        }
+
+        function onSubmit(){
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            document.write('<h1 style = "color: green; margin-top="30px"; ">Data submission successful..!</h1>' + '<br />' + 'Name: ' + name + '<br />' + 'Email: '+ email);
+          
+            return true;
+        }
+    </script>
+</body>
+</html>
